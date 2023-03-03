@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EF8CDAB29B26EDD00898B41 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2EF8CDAA29B26EDD00898B41 /* GoogleService-Info.plist */; };
+		2EF8CDAD29B26F9D00898B41 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CDAC29B26F9D00898B41 /* UserInfo.swift */; };
+		2EF8CDB229B270CC00898B41 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CDAE29B270CB00898B41 /* SignUpView.swift */; };
+		2EF8CDB329B270CC00898B41 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CDAF29B270CB00898B41 /* AuthenticationView.swift */; };
+		2EF8CDB429B270CC00898B41 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CDB029B270CB00898B41 /* ForgotPasswordView.swift */; };
+		2EF8CDB529B270CC00898B41 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CDB129B270CC00898B41 /* LogInView.swift */; };
+		2EF8CDB729B270D500898B41 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CDB629B270D400898B41 /* Constants.swift */; };
+		2EF8CDB929B271AC00898B41 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CDB829B271AC00898B41 /* MainView.swift */; };
+		2EF8CDBB29B271D000898B41 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CDBA29B271D000898B41 /* SettingsView.swift */; };
+		2EF8CDBD29B2723600898B41 /* FetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CDBC29B2723600898B41 /* FetchData.swift */; };
 		2EF8CEDE29AE8E74007848F8 /* PumpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CEDD29AE8E74007848F8 /* PumpApp.swift */; };
 		2EF8CEE029AE8E74007848F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CEDF29AE8E74007848F8 /* ContentView.swift */; };
 		2EF8CEE229AE8E76007848F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EF8CEE129AE8E76007848F8 /* Assets.xcassets */; };
@@ -14,6 +24,7 @@
 		2EF8CEEF29AE8E76007848F8 /* PumpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CEEE29AE8E76007848F8 /* PumpTests.swift */; };
 		2EF8CEF929AE8E76007848F8 /* PumpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CEF829AE8E76007848F8 /* PumpUITests.swift */; };
 		2EF8CEFB29AE8E76007848F8 /* PumpUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CEFA29AE8E76007848F8 /* PumpUITestsLaunchTests.swift */; };
+		9F341716B88E440C7626FCEF /* Pods_Pump.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9413DBBA3C1D1DF0C72714 /* Pods_Pump.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +45,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2EF8CDAA29B26EDD00898B41 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2EF8CDAC29B26F9D00898B41 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		2EF8CDAE29B270CB00898B41 /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		2EF8CDAF29B270CB00898B41 /* AuthenticationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		2EF8CDB029B270CB00898B41 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		2EF8CDB129B270CC00898B41 /* LogInView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		2EF8CDB629B270D400898B41 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2EF8CDB829B271AC00898B41 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		2EF8CDBA29B271D000898B41 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		2EF8CDBC29B2723600898B41 /* FetchData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchData.swift; sourceTree = "<group>"; };
 		2EF8CEDA29AE8E74007848F8 /* Pump.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pump.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF8CEDD29AE8E74007848F8 /* PumpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PumpApp.swift; sourceTree = "<group>"; };
 		2EF8CEDF29AE8E74007848F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +65,9 @@
 		2EF8CEF429AE8E76007848F8 /* PumpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PumpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF8CEF829AE8E76007848F8 /* PumpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PumpUITests.swift; sourceTree = "<group>"; };
 		2EF8CEFA29AE8E76007848F8 /* PumpUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PumpUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5B9413DBBA3C1D1DF0C72714 /* Pods_Pump.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pump.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C996004293998D0942D9A82E /* Pods-Pump.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pump.debug.xcconfig"; path = "Target Support Files/Pods-Pump/Pods-Pump.debug.xcconfig"; sourceTree = "<group>"; };
+		CA97E6058412939BE1716F84 /* Pods-Pump.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pump.release.xcconfig"; path = "Target Support Files/Pods-Pump/Pods-Pump.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F341716B88E440C7626FCEF /* Pods_Pump.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +103,8 @@
 				2EF8CEED29AE8E76007848F8 /* PumpTests */,
 				2EF8CEF729AE8E76007848F8 /* PumpUITests */,
 				2EF8CEDB29AE8E74007848F8 /* Products */,
+				EADFB1E504FC034EE78B2D8E /* Pods */,
+				AC247FF3C6492D9331A2CAA2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,7 +123,17 @@
 			children = (
 				2EF8CEDD29AE8E74007848F8 /* PumpApp.swift */,
 				2EF8CEDF29AE8E74007848F8 /* ContentView.swift */,
+				2EF8CDB829B271AC00898B41 /* MainView.swift */,
+				2EF8CDB629B270D400898B41 /* Constants.swift */,
+				2EF8CDBA29B271D000898B41 /* SettingsView.swift */,
+				2EF8CDBC29B2723600898B41 /* FetchData.swift */,
+				2EF8CDAC29B26F9D00898B41 /* UserInfo.swift */,
+				2EF8CDAF29B270CB00898B41 /* AuthenticationView.swift */,
+				2EF8CDB029B270CB00898B41 /* ForgotPasswordView.swift */,
+				2EF8CDB129B270CC00898B41 /* LogInView.swift */,
+				2EF8CDAE29B270CB00898B41 /* SignUpView.swift */,
 				2EF8CEE129AE8E76007848F8 /* Assets.xcassets */,
+				2EF8CDAA29B26EDD00898B41 /* GoogleService-Info.plist */,
 				2EF8CEE329AE8E76007848F8 /* Preview Content */,
 			);
 			path = Pump;
@@ -127,6 +164,23 @@
 			path = PumpUITests;
 			sourceTree = "<group>";
 		};
+		AC247FF3C6492D9331A2CAA2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B9413DBBA3C1D1DF0C72714 /* Pods_Pump.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EADFB1E504FC034EE78B2D8E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C996004293998D0942D9A82E /* Pods-Pump.debug.xcconfig */,
+				CA97E6058412939BE1716F84 /* Pods-Pump.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +188,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2EF8CEFE29AE8E76007848F8 /* Build configuration list for PBXNativeTarget "Pump" */;
 			buildPhases = (
+				BEBD8A01347420A7834606FD /* [CP] Check Pods Manifest.lock */,
 				2EF8CED629AE8E74007848F8 /* Sources */,
 				2EF8CED729AE8E74007848F8 /* Frameworks */,
 				2EF8CED829AE8E74007848F8 /* Resources */,
+				143BFCF0DCC5BC6E04B037F3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EF8CEE529AE8E76007848F8 /* Preview Assets.xcassets in Resources */,
+				2EF8CDAB29B26EDD00898B41 /* GoogleService-Info.plist in Resources */,
 				2EF8CEE229AE8E76007848F8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,13 +309,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		143BFCF0DCC5BC6E04B037F3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pump/Pods-Pump-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pump/Pods-Pump-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pump/Pods-Pump-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BEBD8A01347420A7834606FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pump-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2EF8CED629AE8E74007848F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EF8CDB229B270CC00898B41 /* SignUpView.swift in Sources */,
+				2EF8CDB929B271AC00898B41 /* MainView.swift in Sources */,
+				2EF8CDBD29B2723600898B41 /* FetchData.swift in Sources */,
+				2EF8CDB529B270CC00898B41 /* LogInView.swift in Sources */,
 				2EF8CEE029AE8E74007848F8 /* ContentView.swift in Sources */,
+				2EF8CDAD29B26F9D00898B41 /* UserInfo.swift in Sources */,
+				2EF8CDBB29B271D000898B41 /* SettingsView.swift in Sources */,
 				2EF8CEDE29AE8E74007848F8 /* PumpApp.swift in Sources */,
+				2EF8CDB429B270CC00898B41 /* ForgotPasswordView.swift in Sources */,
+				2EF8CDB329B270CC00898B41 /* AuthenticationView.swift in Sources */,
+				2EF8CDB729B270D500898B41 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +519,7 @@
 		};
 		2EF8CEFF29AE8E76007848F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C996004293998D0942D9A82E /* Pods-Pump.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -440,6 +549,7 @@
 		};
 		2EF8CF0029AE8E76007848F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA97E6058412939BE1716F84 /* Pods-Pump.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
