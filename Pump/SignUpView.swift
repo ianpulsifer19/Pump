@@ -25,7 +25,7 @@ struct SignUpView: View {
                     TextField("Email Address", text: $userInfo.username).padding(.bottom)
                     SecureField("Password", text: $userInfo.password).padding(.bottom)
                     SecureField("Confirm Password", text: $userInfo.password)
-                }.font(Constants.textFont).padding().cornerRadius(30).background(Color.white)
+                }.padding().background(Color.accent).cornerRadius(12).padding().font(Constants.textFont)
                 
                 Button{
                     Auth.auth().createUser(withEmail: userInfo.username, password: userInfo.password){ user, error  in
@@ -38,12 +38,12 @@ struct SignUpView: View {
                     }
                 } label:{
                     Text("Sign Up").frame(width: 220, height: 50, alignment: .center).font(Constants.buttonFont)
-                }.background(Color.white).cornerRadius(200).padding()
+                }.background(Color.accent).cornerRadius(200).padding()
                 Button{
                     viewState = .authenticate
                 } label:{
                     Text("Back").frame(width: 220, height: 50, alignment: .center).font(Constants.buttonFont)
-                }.background(Color.white).cornerRadius(200)
+                }.background(Color.accent).cornerRadius(200)
 
                 
 

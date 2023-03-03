@@ -26,3 +26,7 @@ struct Constants{
 extension Color{
     static let highlight = Color("Highlight")
 }
+
+extension Color{
+    static let accent = Color("Accent")
+}
