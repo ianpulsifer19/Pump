@@ -22,7 +22,7 @@ struct LogInView: View {
                 Spacer()
                
                 VStack{
-                    TextField("Email Address", text: $userInfo.username).foregroundColor(Color.accent).padding(.bottom)
+                    TextField("Email Address", text: $userInfo.username).padding(.bottom)
                     SecureField("Password", text: $userInfo.password)
                 }.padding().background(Color.accent).cornerRadius(12).padding().font(Constants.textFont)
                 
