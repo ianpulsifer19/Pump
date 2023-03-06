@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct WorkoutDetailView: View {
+    @Binding var viewState: ViewState = .workout
     var body: some View {
         ZStack {
             Rectangle()
@@ -15,11 +16,9 @@ struct WorkoutDetailView: View {
                 .background(Color.blue)
             VStack {
                 Spacer()
-                HStack{
                     Text("exercise | Sets: sets | Reps: reps")
-                }
                 Button {
-                    //viewState = editWorkout
+                    //viewState = .editWorkout
                 } label: {
                     Text("Edit Workout")
                         .frame(width: 220, height: 50, alignment: .center)
@@ -28,7 +27,7 @@ struct WorkoutDetailView: View {
                         
                 }.padding()
                 Button {
-                    //viewState = startWorkout
+                    //viewState = .startWorkout
                 } label: {
                     Text("Start Workout")
                         .frame(width: 220, height: 50, alignment: .center)
