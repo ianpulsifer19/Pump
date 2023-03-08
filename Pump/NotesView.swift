@@ -19,7 +19,7 @@ struct NotesView: View {
        
         Text("\($userInfo.workout.exercise.name)")
         Text("\($userInfo.workout.exercise.details)")
-        
+        //asjdniefuhougsdf
     }
 struct NotesView_Previews: PreviewProvider {
     static var previews: some View {
