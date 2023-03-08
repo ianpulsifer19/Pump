@@ -6,10 +6,31 @@
 //
 
 import SwiftUI
+import FirebaseAuth
+import FirebaseDatabase
 
 struct MainView: View {
+    @EnvironmentObject var userInfo: UserInfo
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Rectangle().edgesIgnoringSafeArea(.all).foregroundColor(.highlight)
+            VStack{
+                
+                
+            //add workout
+                Button{
+                guard let uid = Auth.auth().currentUser?.uid else{return}
+                
+                userInfo.workouts.append(Workout())
+                
+                let database = Database.database().reference().child("users/\(uid)")
+                database.setValue(self.userInfo.dictionary)
+            }label: {
+                Text("Add workout").padding().background(Color.accent).foregroundColor(Color.highlight).cornerRadius(20)
+        }
+                
+            }
+        }
     }
 }
 
