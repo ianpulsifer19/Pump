@@ -6,17 +6,25 @@
 //
 
 import SwiftUI
+import FirebaseAuth
+import FirebaseDatabase
 
 struct WorkoutDetailView: View {
-    @Binding var viewState: ViewState = .workout
+    @EnvironmentObject var userInfo: UserInfo
     var body: some View {
         ZStack {
             Rectangle()
                 .edgesIgnoringSafeArea(.all)
-                .background(Color.blue)
+                .foregroundColor(Color.highlight)
             VStack {
-                Spacer()
-                    Text("exercise | Sets: sets | Reps: reps")
+                VStack{
+                    TextField("Exercise Name", text: $userInfo.workouts[0].exercises[0].name).font(Constants.buttonFont).padding(.leading).onSubmit {
+                        guard let uid = Auth.auth().currentUser?.uid else{return}
+                        
+                        let database = Database.database().reference().child("users/\(uid)")
+                        database.setValue(self.userInfo.dictionary)
+                    }
+                }.foregroundColor(Color.accent).font(Constants.textFont)
                 Button {
                     //viewState = .editWorkout
                 } label: {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E61E43529B93BD60014BADA /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E61E43429B93BD60014BADA /* Workout.swift */; };
 		2EF8CDAB29B26EDD00898B41 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2EF8CDAA29B26EDD00898B41 /* GoogleService-Info.plist */; };
 		2EF8CDAD29B26F9D00898B41 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CDAC29B26F9D00898B41 /* UserInfo.swift */; };
 		2EF8CDB229B270CC00898B41 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CDAE29B270CB00898B41 /* SignUpView.swift */; };
@@ -18,6 +19,7 @@
 		2EF8CDBB29B271D000898B41 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CDBA29B271D000898B41 /* SettingsView.swift */; };
 		2EF8CDBD29B2723600898B41 /* FetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CDBC29B2723600898B41 /* FetchData.swift */; };
 		2EF8CDBF29B670A100898B41 /* WorkoutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CDBE29B670A100898B41 /* WorkoutDetailView.swift */; };
+		2EF8CDC329B675A800898B41 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CDC229B675A800898B41 /* Exercise.swift */; };
 		2EF8CEDE29AE8E74007848F8 /* PumpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CEDD29AE8E74007848F8 /* PumpApp.swift */; };
 		2EF8CEE029AE8E74007848F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CEDF29AE8E74007848F8 /* ContentView.swift */; };
 		2EF8CEE229AE8E76007848F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EF8CEE129AE8E76007848F8 /* Assets.xcassets */; };
@@ -48,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E61E43429B93BD60014BADA /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		2EF8CDAA29B26EDD00898B41 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2EF8CDAC29B26F9D00898B41 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		2EF8CDAE29B270CB00898B41 /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
@@ -59,6 +62,7 @@
 		2EF8CDBA29B271D000898B41 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		2EF8CDBC29B2723600898B41 /* FetchData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchData.swift; sourceTree = "<group>"; };
 		2EF8CDBE29B670A100898B41 /* WorkoutDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutDetailView.swift; sourceTree = "<group>"; };
+		2EF8CDC229B675A800898B41 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		2EF8CEDA29AE8E74007848F8 /* Pump.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pump.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF8CEDD29AE8E74007848F8 /* PumpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PumpApp.swift; sourceTree = "<group>"; };
 		2EF8CEDF29AE8E74007848F8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -134,6 +138,8 @@
 				2EF8CDBA29B271D000898B41 /* SettingsView.swift */,
 				2EF8CDBC29B2723600898B41 /* FetchData.swift */,
 				2EF8CDAC29B26F9D00898B41 /* UserInfo.swift */,
+				2EF8CDC229B675A800898B41 /* Exercise.swift */,
+				2E61E43429B93BD60014BADA /* Workout.swift */,
 				2EF8CDAF29B270CB00898B41 /* AuthenticationView.swift */,
 				2EF8CDBE29B670A100898B41 /* WorkoutDetailView.swift */,
 				D35C8E8529BA5E3300180B22 /* WorkoutDayView.swift */,
@@ -374,7 +380,9 @@
 				2EF8CEE029AE8E74007848F8 /* ContentView.swift in Sources */,
 				2EF8CDAD29B26F9D00898B41 /* UserInfo.swift in Sources */,
 				2EF8CDBB29B271D000898B41 /* SettingsView.swift in Sources */,
+				2E61E43529B93BD60014BADA /* Workout.swift in Sources */,
 				2EF8CDBF29B670A100898B41 /* WorkoutDetailView.swift in Sources */,
+				2EF8CDC329B675A800898B41 /* Exercise.swift in Sources */,
 				2EF8CEDE29AE8E74007848F8 /* PumpApp.swift in Sources */,
 				2EF8CDB429B270CC00898B41 /* ForgotPasswordView.swift in Sources */,
 				2EF8CDB329B270CC00898B41 /* AuthenticationView.swift in Sources */,

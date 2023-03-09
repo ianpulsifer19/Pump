@@ -15,10 +15,16 @@ class UserInfo: ObservableObject{
     @Published var FirstName: String
     @Published var LastName: String
     @Published var FavTeam: String
+    @Published var workouts: [Workout] = [Workout()]
     
     var dictionary: [String: Any]{
-        return ["First Name": FirstName, "Last Name": LastName, "Favorite Team": FavTeam]
-    }
+        var ws: [String: Any] = [:]
+        for w in workouts{
+            ws[w.id.uuidString] = w.dictionary
+        }
+        return ws
+        }
+    
     
     init(username: String = "", password: String = ""){
         self.username = username
