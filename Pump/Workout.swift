@@ -9,19 +9,20 @@ import Foundation
 
 class Workout: Identifiable {
     @Published var name: String
-    @Published var sets: Int
-    @Published var reps: Int
-    @Published var weight: Int
+    @Published var exercises: [Exercise]
     @Published var id = UUID()
     
     var dictionary: [String: Any]{
-        return ["Name": name, "Sets": sets, "Reps": reps, "Weight": weight]
+        var ws: [String: Any] = [:]
+        for w in exercises{
+            ws[w.id.uuidString] = w.dictionary
+        }
+        
+        return ["Name": name, "Exercises": ws]
     }
     
-    init(name: String = "Curls", sets: Int = 3, reps: Int = 10, weight: Int = 30){
+    init(name: String = "Monday", exercises: [Exercise] = [Exercise(), Exercise()]){
         self.name = name
-        self.sets = sets
-        self.reps = reps
-        self.weight = weight
+        self.exercises = exercises
     }
 }

@@ -16,7 +16,6 @@ struct MainView: View {
             Rectangle().edgesIgnoringSafeArea(.all).foregroundColor(.highlight)
             VStack{
                 
-                
             //add workout
                 Button{
                 guard let uid = Auth.auth().currentUser?.uid else{return}
