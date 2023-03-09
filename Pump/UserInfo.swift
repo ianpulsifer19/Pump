@@ -15,7 +15,7 @@ class UserInfo: ObservableObject{
     @Published var FirstName: String
     @Published var LastName: String
     @Published var FavTeam: String
-    @Published var workouts: [Workout] = []
+    @Published var workouts: [Workout] = [Workout()]
     
     var dictionary: [String: Any]{
         var ws: [String: Any] = [:]

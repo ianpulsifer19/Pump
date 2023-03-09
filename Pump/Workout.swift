@@ -21,7 +21,7 @@ class Workout: Identifiable {
         return ["Name": name, "Exercises": ws]
     }
     
-    init(name: String = "Monday", exercises: [Exercise] = [Exercise(), Exercise()]){
+    init(name: String = "No Name", exercises: [Exercise] = [Exercise(), Exercise()]){
         self.name = name
         self.exercises = exercises
     }
