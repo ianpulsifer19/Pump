@@ -1,4 +1,4 @@
-//
+
 //  NotesView.swift
 //  Pump
 //
@@ -19,7 +19,7 @@ struct NotesView: View {
        
         Text("\($userInfo.workout.exercise.name)")
         Text("\($userInfo.workout.exercise.details)")
-        //asjdniefuhougsdf
+        
     }
 struct NotesView_Previews: PreviewProvider {
     static var previews: some View {
@@ -27,3 +27,5 @@ struct NotesView_Previews: PreviewProvider {
     }
 }
 }
+
+
