@@ -7,6 +7,9 @@
 
 import Foundation
 import FirebaseAuth
+import FirebaseDatabase
+
+
 
 class UserInfo: ObservableObject{
     @Published var username: String
