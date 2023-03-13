@@ -22,8 +22,8 @@ struct LogInView: View {
                 Spacer()
                
                 VStack{
-                    TextField("Email Address", text: $userInfo.username).padding(.bottom)
-                    SecureField("Password", text: $userInfo.password)
+                    TextField("Email Address", text: $userInfo.username).padding(.bottom).disableAutocorrection(true)
+                    SecureField("Password", text: $userInfo.password).disableAutocorrection(true)
                 }.padding().background(Color.accent).cornerRadius(12).padding().font(Constants.textFont)
                 
                 Button{
