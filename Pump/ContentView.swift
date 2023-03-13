@@ -30,17 +30,23 @@ struct ContentView: View {
         
             TabView{
                 MainView().tabItem {
-                    Image(systemName: "house")
+                    Image(systemName: "")
                     Text("Home")
                 }
                 SettingsView(viewState: $viewState).tabItem{
-                    Image(systemName: "gear")
+                    Image(systemName: "")
                     Text("Settings")
                 }
             
-        }
+            }.onAppear {
+                fetchData.listentoRealtimeDatabase()
+                userInfo.workouts = fetchData.workouts as! [Workout]
+            }
+            .onDisappear {
+                fetchData.stopListening()
+            }
     }
-}
+    }
 }
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

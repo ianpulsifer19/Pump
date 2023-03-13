@@ -1,30 +1,22 @@
 //
-//  WorkoutDetailView.swift
+//  WorkoutDayView.swift
 //  Pump
 //
-//  Created by Crosby Johnson (student LM) on 3/3/23.
+//  Created by Crosby Johnson (student LM) on 3/9/23.
 //
 
 import SwiftUI
-import FirebaseAuth
-import FirebaseDatabase
 
-struct WorkoutDetailView: View {
-    @EnvironmentObject var userInfo: UserInfo
+struct WorkoutDayView: View {
+    @Binding var viewState: ViewState = .workout
     var body: some View {
         ZStack {
             Rectangle()
                 .edgesIgnoringSafeArea(.all)
-                .foregroundColor(Color.highlight)
+                .background(Color.blue)
             VStack {
-                VStack{
-                    TextField("Exercise Name", text: $userInfo.workouts[0].exercises[0].name).font(Constants.buttonFont).padding(.leading).onSubmit {
-                        guard let uid = Auth.auth().currentUser?.uid else{return}
-                        
-                        let database = Database.database().reference().child("users/\(uid)")
-                        database.setValue(self.userInfo.dictionary)
-                    }
-                }.foregroundColor(Color.accent).font(Constants.textFont)
+                Spacer()
+                    Text("exercise | Sets: sets | Reps: reps")
                 Button {
                     //viewState = .editWorkout
                 } label: {
@@ -50,8 +42,8 @@ struct WorkoutDetailView: View {
     }
 }
 
-struct WorkoutDetailView_Previews: PreviewProvider {
+struct WorkoutDayView_Previews: PreviewProvider {
     static var previews: some View {
-        WorkoutDetailView()
+        WorkoutDayView()
     }
 }

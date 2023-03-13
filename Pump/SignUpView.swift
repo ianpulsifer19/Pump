@@ -23,8 +23,11 @@ struct SignUpView: View {
                
                 VStack{
                     TextField("Email Address", text: $userInfo.username).padding(.bottom)
+                        .disableAutocorrection(true)
                     SecureField("Password", text: $userInfo.password).padding(.bottom)
+                        .disableAutocorrection(true)
                     SecureField("Confirm Password", text: $userInfo.password)
+                        .disableAutocorrection(true)
                 }.padding().background(Color.accent).cornerRadius(12).padding().font(Constants.textFont)
                 
                 Button{

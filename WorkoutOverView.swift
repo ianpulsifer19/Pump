@@ -8,23 +8,27 @@
 import SwiftUI
 
 struct WorkoutOverView: View {
+    @Binding var exercise: Exercise
     var body: some View {
+        ZStack{
             Rectangle()
-                .foregroundColor(Color.blue)
+                .foregroundColor(Color.accent)
                 .cornerRadius(10)
                 .frame(width: 200, height: 100)
                 .padding()
         VStack{
-            Text("")
+            Text("\(exercise.name)")
             Text("Sets - \(exercise.sets)")
             Text("Reps - \(exercise.reps)")
             Text("Weight - \(exercise.weight)lbs")
+        }.foregroundColor(Color.highlight)
+            
         }
     }
 }
 
 struct WorkoutOverView_Previews: PreviewProvider {
     static var previews: some View {
-        WorkoutOverView()
+        WorkoutOverView(exercise: Binding.constant(Exercise()))
     }
 }
