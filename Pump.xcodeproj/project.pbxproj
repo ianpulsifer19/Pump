@@ -28,6 +28,7 @@
 		2EF8CEF929AE8E76007848F8 /* PumpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CEF829AE8E76007848F8 /* PumpUITests.swift */; };
 		2EF8CEFB29AE8E76007848F8 /* PumpUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CEFA29AE8E76007848F8 /* PumpUITestsLaunchTests.swift */; };
 		9F341716B88E440C7626FCEF /* Pods_Pump.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9413DBBA3C1D1DF0C72714 /* Pods_Pump.framework */; };
+		CC979D3329BFA4A900CEA419 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC979D3229BFA4A900CEA419 /* NotesView.swift */; };
 		D35C8E8629BA5E3300180B22 /* WorkoutDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35C8E8529BA5E3300180B22 /* WorkoutDayView.swift */; };
 		D3E8C63B29B67750002FA225 /* WorkoutOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E8C63A29B67750002FA225 /* WorkoutOverView.swift */; };
 /* End PBXBuildFile section */
@@ -76,6 +77,7 @@
 		5B9413DBBA3C1D1DF0C72714 /* Pods_Pump.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pump.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C996004293998D0942D9A82E /* Pods-Pump.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pump.debug.xcconfig"; path = "Target Support Files/Pods-Pump/Pods-Pump.debug.xcconfig"; sourceTree = "<group>"; };
 		CA97E6058412939BE1716F84 /* Pods-Pump.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pump.release.xcconfig"; path = "Target Support Files/Pods-Pump/Pods-Pump.release.xcconfig"; sourceTree = "<group>"; };
+		CC979D3229BFA4A900CEA419 /* NotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
 		D35C8E8529BA5E3300180B22 /* WorkoutDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDayView.swift; sourceTree = "<group>"; };
 		D3E8C63A29B67750002FA225 /* WorkoutOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutOverView.swift; path = ../WorkoutOverView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,11 +136,11 @@
 				2EF8CEDD29AE8E74007848F8 /* PumpApp.swift */,
 				2EF8CEDF29AE8E74007848F8 /* ContentView.swift */,
 				2EF8CDB829B271AC00898B41 /* MainView.swift */,
-				CC979D2829B8FBC900CEA419 /* NotesView.swift */,
 				2EF8CDB629B270D400898B41 /* Constants.swift */,
 				2EF8CDBA29B271D000898B41 /* SettingsView.swift */,
 				2EF8CDBC29B2723600898B41 /* FetchData.swift */,
 				2EF8CDAC29B26F9D00898B41 /* UserInfo.swift */,
+				CC979D3229BFA4A900CEA419 /* NotesView.swift */,
 				2EF8CDC229B675A800898B41 /* Exercise.swift */,
 				2E61E43429B93BD60014BADA /* Workout.swift */,
 				2EF8CDAF29B270CB00898B41 /* AuthenticationView.swift */,
@@ -383,9 +385,9 @@
 				2EF8CDBB29B271D000898B41 /* SettingsView.swift in Sources */,
 				2E61E43529B93BD60014BADA /* Workout.swift in Sources */,
 				2EF8CDBF29B670A100898B41 /* WorkoutDetailView.swift in Sources */,
+				CC979D3329BFA4A900CEA419 /* NotesView.swift in Sources */,
 				2EF8CDC329B675A800898B41 /* Exercise.swift in Sources */,
 				2EF8CEDE29AE8E74007848F8 /* PumpApp.swift in Sources */,
-				CC979D2929B8FBC900CEA419 /* NotesView.swift in Sources */,
 				2EF8CDB429B270CC00898B41 /* ForgotPasswordView.swift in Sources */,
 				2EF8CDB329B270CC00898B41 /* AuthenticationView.swift in Sources */,
 				2EF8CDB729B270D500898B41 /* Constants.swift in Sources */,
