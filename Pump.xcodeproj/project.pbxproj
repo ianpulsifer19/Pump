@@ -28,6 +28,7 @@
 		2EF8CEF929AE8E76007848F8 /* PumpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CEF829AE8E76007848F8 /* PumpUITests.swift */; };
 		2EF8CEFB29AE8E76007848F8 /* PumpUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CEFA29AE8E76007848F8 /* PumpUITestsLaunchTests.swift */; };
 		9F341716B88E440C7626FCEF /* Pods_Pump.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9413DBBA3C1D1DF0C72714 /* Pods_Pump.framework */; };
+		D35C8E8629BA5E3300180B22 /* WorkoutDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35C8E8529BA5E3300180B22 /* WorkoutDayView.swift */; };
 		D3E8C63B29B67750002FA225 /* WorkoutOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E8C63A29B67750002FA225 /* WorkoutOverView.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		5B9413DBBA3C1D1DF0C72714 /* Pods_Pump.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pump.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C996004293998D0942D9A82E /* Pods-Pump.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pump.debug.xcconfig"; path = "Target Support Files/Pods-Pump/Pods-Pump.debug.xcconfig"; sourceTree = "<group>"; };
 		CA97E6058412939BE1716F84 /* Pods-Pump.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pump.release.xcconfig"; path = "Target Support Files/Pods-Pump/Pods-Pump.release.xcconfig"; sourceTree = "<group>"; };
+		D35C8E8529BA5E3300180B22 /* WorkoutDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDayView.swift; sourceTree = "<group>"; };
 		D3E8C63A29B67750002FA225 /* WorkoutOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutOverView.swift; path = ../WorkoutOverView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +142,7 @@
 				2E61E43429B93BD60014BADA /* Workout.swift */,
 				2EF8CDAF29B270CB00898B41 /* AuthenticationView.swift */,
 				2EF8CDBE29B670A100898B41 /* WorkoutDetailView.swift */,
+				D35C8E8529BA5E3300180B22 /* WorkoutDayView.swift */,
 				D3E8C63A29B67750002FA225 /* WorkoutOverView.swift */,
 				2EF8CDB029B270CB00898B41 /* ForgotPasswordView.swift */,
 				2EF8CDB129B270CC00898B41 /* LogInView.swift */,
@@ -373,6 +376,7 @@
 				2EF8CDBD29B2723600898B41 /* FetchData.swift in Sources */,
 				D3E8C63B29B67750002FA225 /* WorkoutOverView.swift in Sources */,
 				2EF8CDB529B270CC00898B41 /* LogInView.swift in Sources */,
+				D35C8E8629BA5E3300180B22 /* WorkoutDayView.swift in Sources */,
 				2EF8CEE029AE8E74007848F8 /* ContentView.swift in Sources */,
 				2EF8CDAD29B26F9D00898B41 /* UserInfo.swift in Sources */,
 				2EF8CDBB29B271D000898B41 /* SettingsView.swift in Sources */,
