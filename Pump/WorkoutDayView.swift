@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct WorkoutDayView: View {
-    @Binding var viewState: ViewState = .workout
+    @Binding var viewState: ViewState
     var body: some View {
         ZStack {
             Rectangle()
@@ -44,6 +44,6 @@ struct WorkoutDayView: View {
 
 struct WorkoutDayView_Previews: PreviewProvider {
     static var previews: some View {
-        WorkoutDayView()
+        WorkoutDayView(viewState: Binding.constant(.workout))
     }
 }

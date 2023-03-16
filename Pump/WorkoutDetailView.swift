@@ -17,14 +17,14 @@ struct WorkoutDetailView: View {
                 .edgesIgnoringSafeArea(.all)
                 .foregroundColor(Color.highlight)
             VStack {
-                VStack{
-                    TextField("Exercise Name", text: $userInfo.workouts[0].exercises[0].name).font(Constants.buttonFont).padding(.leading).onSubmit {
-                        guard let uid = Auth.auth().currentUser?.uid else{return}
-                        
-                        let database = Database.database().reference().child("users/\(uid)")
-                        database.setValue(self.userInfo.dictionary)
-                    }
-                }.foregroundColor(Color.accent).font(Constants.textFont)
+//                VStack{
+//                    TextField("Exercise Name", text: $userInfo.workouts[0].exercises[0].name).font(Constants.buttonFont).padding(.leading).onSubmit {
+//                        guard let uid = Auth.auth().currentUser?.uid else{return}
+//
+//                        let database = Database.database().reference().child("users/\(uid)")
+//                        database.setValue(self.userInfo.dictionary)
+//                    }
+//                }.foregroundColor(Color.accent).font(Constants.textFont)
                 Button {
                     //viewState = .editWorkout
                 } label: {

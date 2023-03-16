@@ -9,7 +9,7 @@ import SwiftUI
 import FirebaseAuth
 
 struct ContentView: View {
-    @StateObject var fetchData = FetchData()
+    //@StateObject var fetchData = FetchData()
     @EnvironmentObject var userInfo: UserInfo
     @State var viewState: ViewState = .authenticate
     
@@ -38,12 +38,6 @@ struct ContentView: View {
                     Text("Settings")
                 }
             
-            }.onAppear {
-                fetchData.listentoRealtimeDatabase()
-                userInfo.workouts = fetchData.workouts as! [Workout]
-            }
-            .onDisappear {
-                fetchData.stopListening()
             }
     }
     }
