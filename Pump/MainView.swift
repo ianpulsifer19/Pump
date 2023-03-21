@@ -11,6 +11,7 @@ import FirebaseDatabase
 
 struct MainView: View {
     @EnvironmentObject var userInfo: UserInfo
+    @StateObject var fetchdata = FetchData()
     
     var body: some View {
         ZStack {
@@ -23,21 +24,21 @@ struct MainView: View {
                 
                 
             //add workout
-//                Button{
-//                guard let uid = Auth.auth().currentUser?.uid else{return}
-//
-//                userInfo.workouts.append(workout())
-//
-//                let database = Database.database().reference().child("users/\(uid)")
-//                database.setValue(self.userInfo.dictionary)
-//            }label: {
-//                Text("Add workout").padding().background(Color.accent).foregroundColor(Color.highlight).cornerRadius(20)
-//        }
+                Button{
+                guard let uid = Auth.auth().currentUser?.uid else{return}
+
+                userInfo.workouts.append(Workout())
+
+                let database = Database.database().reference().child("users/\(uid)")
+                database.setValue(self.userInfo.dictionary)
+            }label: {
+                Text("Add workout").padding().background(Color.accent).foregroundColor(Color.highlight).cornerRadius(20)
+        }
                 
             }
         }
-        .onAppear{
-            userInfo.getData()
+        .task{
+            await fetchdata.getData()
         }
     }
 
