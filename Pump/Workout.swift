@@ -13,12 +13,13 @@ class Workout: Identifiable {
     @Published var id = UUID()
     
     var dictionary: [String: Any]{
-        var ws: [String: Any] = [:]
+        
+        var works = [[String: Any]]()
         for w in exercises{
-            ws[w.id.uuidString] = w.dictionary
+            works.append(w.dictionary)
         }
         
-        return ["Name": name, "Exercises": ws]
+        return ["Name": name, "Exercises": works]
     }
     
     init(name: String = "No Name", exercises: [Exercise] = [Exercise(), Exercise()]){

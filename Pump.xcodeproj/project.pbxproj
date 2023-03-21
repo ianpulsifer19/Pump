@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E320F2229C387B1006AFAA9 /* Stucts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E320F2129C387B1006AFAA9 /* Stucts.swift */; };
 		2E61E43529B93BD60014BADA /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E61E43429B93BD60014BADA /* Workout.swift */; };
 		2E61E43729BB8A450014BADA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E61E43629BB8A440014BADA /* GoogleService-Info.plist */; };
 		2EF8CDAD29B26F9D00898B41 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CDAC29B26F9D00898B41 /* UserInfo.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E320F2129C387B1006AFAA9 /* Stucts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stucts.swift; sourceTree = "<group>"; };
 		2E61E43429B93BD60014BADA /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		2E61E43629BB8A440014BADA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2EF8CDAC29B26F9D00898B41 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				2EF8CDB629B270D400898B41 /* Constants.swift */,
 				2EF8CDBA29B271D000898B41 /* SettingsView.swift */,
 				2EF8CDBC29B2723600898B41 /* FetchData.swift */,
+				2E320F2129C387B1006AFAA9 /* Stucts.swift */,
 				2EF8CDAC29B26F9D00898B41 /* UserInfo.swift */,
 				CC979D3229BFA4A900CEA419 /* NotesView.swift */,
 				2EF8CDC229B675A800898B41 /* Exercise.swift */,
@@ -381,6 +384,7 @@
 				2EF8CDB529B270CC00898B41 /* LogInView.swift in Sources */,
 				D35C8E8629BA5E3300180B22 /* WorkoutDayView.swift in Sources */,
 				2EF8CEE029AE8E74007848F8 /* ContentView.swift in Sources */,
+				2E320F2229C387B1006AFAA9 /* Stucts.swift in Sources */,
 				2EF8CDAD29B26F9D00898B41 /* UserInfo.swift in Sources */,
 				2EF8CDBB29B271D000898B41 /* SettingsView.swift in Sources */,
 				2E61E43529B93BD60014BADA /* Workout.swift in Sources */,

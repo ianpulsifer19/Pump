@@ -11,17 +11,24 @@ import FirebaseDatabase
 
 struct MainView: View {
     @EnvironmentObject var userInfo: UserInfo
+    @StateObject var fetchdata = FetchData()
+    
     var body: some View {
         ZStack {
             Rectangle().edgesIgnoringSafeArea(.all).foregroundColor(.highlight)
             VStack{
                 
+                List(userInfo.workouts){item in
+                    Text(item.name)
+                }
+                
+                
             //add workout
                 Button{
                 guard let uid = Auth.auth().currentUser?.uid else{return}
-                
+
                 userInfo.workouts.append(Workout())
-                
+
                 let database = Database.database().reference().child("users/\(uid)")
                 database.setValue(self.userInfo.dictionary)
             }label: {
@@ -30,15 +37,12 @@ struct MainView: View {
                 
             }
         }
+        .task{
+            await fetchdata.getData()
+        }
     }
+
 }
-
-
-
-
-
-
-
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {

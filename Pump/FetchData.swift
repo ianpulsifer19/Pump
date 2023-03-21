@@ -3,56 +3,41 @@ import FirebaseDatabase
 import FirebaseAuth
 
 final class FetchData: ObservableObject {
-    @Published var workouts: [workout] = []
     
-    private lazy var databasePath: DatabaseReference? = {
-        let ref = Database.database().reference().child("users/\(Auth.auth().currentUser!.uid)")
-        return ref
-    }()
+    @Published var Workouts: workouts = workouts()
     
-    private let encoder = JSONEncoder()
-    private let decoder = JSONDecoder()
-    
-    func listentoRealtimeDatabase() {
-        guard let databasePath = databasePath else {
-            return
+    func getData() async{
+        let URLString = "https://pump-pump19-default-rtdb.firebaseio.com/users/\(Auth.auth().currentUser?.uid).json"
+        
+        guard let url = URL(string: URLString) else {return}
+        
+        do{
+            let (data, _) = try await URLSession.shared.data(from: url)
+            
+            let workouts = try JSONDecoder().decode(workouts.self, from: data)
+            self.Workouts = workouts
+            print(Workouts)
+        }catch{
+            print(error)
         }
-        databasePath
-            .observe(.childAdded) { [weak self] snapshot in
-                guard
-                    let self = self,
-                    var json = snapshot.value as? [String: Any]
-                else {
-                    return
-                }
-                json["id"] = snapshot.key
-                do {
-                    let workoutData = try JSONSerialization.data(withJSONObject: json)
-                    let w = try self.decoder.decode(workout.self, from: workoutData)
-                    self.workouts.append(w)
-                    print(self.workouts)
-                } catch {
-                    print("an error occurred", error)
-                }
-            }
-    }
-    
-    func stopListening() {
-        databasePath?.removeAllObservers()
     }
 }
 
+struct workouts: Codable {
+    var workouts: [workout] = [workout]()
+}
 
 struct workout: Identifiable, Codable {
-    var name: String
+    var name: String = "Monday"
     var exercises: [exercise]
     var id: String
 }
 
 struct exercise: Identifiable, Codable {
-    var name: String
-    var sets: Int
-    var reps: Int
-    var weight: Int
-    var id = UUID()
+    var name: String = "Curls"
+    var sets: Int = 0
+    var reps: Int = 0
+    var weight: Int = 0
+    var id: String
 }
+
