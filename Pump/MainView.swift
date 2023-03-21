@@ -37,9 +37,6 @@ struct MainView: View {
                 
             }
         }
-        .task{
-            await fetchdata.getData()
-        }
     }
 
 }

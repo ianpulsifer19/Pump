@@ -9,7 +9,7 @@ import SwiftUI
 import FirebaseAuth
 
 struct ContentView: View {
-    //@StateObject var fetchData = FetchData()
+    @StateObject var fetchdata = FetchData()
     @EnvironmentObject var userInfo: UserInfo
     @State var viewState: ViewState = .authenticate
     
@@ -29,12 +29,14 @@ struct ContentView: View {
         else{
         
             TabView{
-                MainView().tabItem {
-                    Image(systemName: "")
+                MainView().task{
+                    await fetchdata.getData()
+                }.tabItem {
+                    Image(systemName: "house")
                     Text("Home")
                 }
                 SettingsView(viewState: $viewState).tabItem{
-                    Image(systemName: "")
+                    Image(systemName: "gear")
                     Text("Settings")
                 }
             
