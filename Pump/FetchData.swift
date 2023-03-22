@@ -7,7 +7,7 @@ final class FetchData: ObservableObject {
     @Published var Workouts: workouts = workouts()
     
     func getData() async{
-        let URLString = "https://pump-pump19-default-rtdb.firebaseio.com/users/h8W6OjcXDcY9REWqlvPOEkj6P193.json"
+        let URLString = "https://pump-pump19-default-rtdb.firebaseio.com/users/\(Auth.auth().currentUser!.uid).json"
         
         guard let url = URL(string: URLString) else {return}
         
