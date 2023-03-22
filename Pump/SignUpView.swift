@@ -37,7 +37,6 @@ struct SignUpView: View {
                             viewState = .list
                         } else {
                             print(error!.localizedDescription)
-                            
                         }
                     }
                 } label:{
