@@ -13,24 +13,41 @@ struct MainView: View {
     @EnvironmentObject var userInfo: UserInfo
     @StateObject var fetchdata = FetchData()
     
+    init(){
+        UITableView.appearance().backgroundColor = .clear
+    }
+    
     var body: some View {
         ZStack {
-            Rectangle().edgesIgnoringSafeArea(.all).foregroundColor(.accent)
+
             VStack{
                 
                 NavigationView{
+                    ZStack{
+                        Rectangle().edgesIgnoringSafeArea(.all).foregroundColor(.accent)
+                List{
                     
-                ScrollView{
-                    ForEach($userInfo.workouts) { w in
+                    ForEach(0..<userInfo.workouts.count, id: \.self) { index in
                         NavigationLink{
                             
                         }label:{
-                            WorkoutDayView(workout: w)
-                        }.navigationTitle("Workouts")
+                            WorkoutDayView(workout: $userInfo.workouts[index])
+                        }.swipeActions(edge: .trailing) {
+                            Button(role: .destructive) {
+                                userInfo.workouts.remove(at: index)
+                                
+                                guard let uid = Auth.auth().currentUser?.uid else{return}
+                                let database = Database.database().reference().child("users/\(uid)")
+                                database.setValue(self.userInfo.dictionary)
+                            } label: {
+                                Label("Delete", systemImage: "trash")
+                            }
+                        }.listRowBackground(Color.accent)
+                    }.navigationTitle("Workouts")
+                }.background(Color.accent)
                     }
                 }
                     
-                }
                 
                 
             //add workout

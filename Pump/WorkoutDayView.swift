@@ -15,28 +15,7 @@ struct WorkoutDayView: View {
                 .edgesIgnoringSafeArea(.all)
                 .foregroundColor(Color.highlight)
             VStack {
-                Spacer()
                 Text(workout.name).foregroundColor(Color.accent).font(Constants.textFont).padding()
-                
-//                Button {
-//                    //viewState = .editWorkout
-//                } label: {
-//                    Text("Edit Workout")
-//                        .frame(width: 220, height: 50, alignment: .center)
-//                        .background(Color.accent)
-//                        .cornerRadius(20)
-//
-//                }
-//                Button {
-//                    //viewState = .startWorkout
-//                } label: {
-//                    Text("Start Workout")
-//                        .frame(width: 220, height: 50, alignment: .center)
-//                        .background(Color.accent)
-//                        .cornerRadius(20)
-//
-//                }.padding()
-
             }
 
         }.cornerRadius(40)
