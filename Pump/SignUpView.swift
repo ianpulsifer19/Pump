@@ -15,7 +15,7 @@ struct SignUpView: View {
     
     var body: some View {
         ZStack {
-            Rectangle().edgesIgnoringSafeArea(.all).foregroundColor(.highlight)
+            Rectangle().edgesIgnoringSafeArea(.all).foregroundColor(.accent)
             VStack {
                 Spacer()
                 Image("logo").resizable().aspectRatio(contentMode: .fit).frame(width: 200)
@@ -28,7 +28,7 @@ struct SignUpView: View {
                         .disableAutocorrection(true)
                     SecureField("Confirm Password", text: $userInfo.password)
                         .disableAutocorrection(true)
-                }.padding().background(Color.accent).cornerRadius(12).padding().font(Constants.textFont)
+                }.padding().background(Color.accent).padding().background(Color.highlight).cornerRadius(12).padding().font(Constants.textFont)
                 
                 Button{
                     Auth.auth().createUser(withEmail: userInfo.username, password: userInfo.password){ user, error  in
@@ -37,16 +37,17 @@ struct SignUpView: View {
                             viewState = .list
                         } else {
                             print(error!.localizedDescription)
+                            
                         }
                     }
                 } label:{
                     Text("Sign Up").frame(width: 220, height: 50, alignment: .center).font(Constants.buttonFont)
-                }.background(Color.accent).cornerRadius(200).padding()
+                }.background(Color.highlight).cornerRadius(200).padding().foregroundColor(.accent)
                 Button{
                     viewState = .authenticate
                 } label:{
                     Text("Back").frame(width: 220, height: 50, alignment: .center).font(Constants.buttonFont)
-                }.background(Color.accent).cornerRadius(200)
+                }.background(Color.highlight).cornerRadius(200).foregroundColor(.accent)
 
                 
 

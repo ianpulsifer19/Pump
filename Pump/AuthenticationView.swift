@@ -11,7 +11,7 @@ struct AuthenticationView: View {
     @Binding var viewState: ViewState
     var body: some View {
         ZStack {
-            Rectangle().edgesIgnoringSafeArea(.all).foregroundColor(.highlight)
+            Rectangle().edgesIgnoringSafeArea(.all).foregroundColor(.accent)
             VStack {
                 Spacer()
                 Image("logo").resizable().aspectRatio(contentMode: .fit).frame(width: 300)
@@ -21,17 +21,17 @@ struct AuthenticationView: View {
                     viewState = .login
                 } label:{
                     Text("Log In").frame(width: 220, height: 50, alignment: .center).font(Constants.buttonFont)
-                }.background(Color.accent).cornerRadius(200).padding([.top, .leading, .trailing])
+                }.background(Color.highlight).cornerRadius(200).padding([.top, .leading, .trailing])
 
                 
                 Button{
                     viewState = .signup
                 } label:{
                     Text("Sign Up").frame(width: 220, height: 50, alignment: .center).font(Constants.buttonFont)
-                }.background(Color.accent).cornerRadius(200).padding([.leading, .bottom, .trailing])
+                }.background(Color.highlight).cornerRadius(200).padding([.leading, .bottom, .trailing])
                 
                 Spacer()
-            }
+            }.foregroundColor(.accent)
         }
     }
 }
