@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseAuth
+import CoreMIDI
 
 struct ContentView: View {
     @StateObject var fetchdata = FetchData()
@@ -31,16 +32,26 @@ struct ContentView: View {
             TabView{
                 MainView().task{
                     await fetchdata.getData()
-                }.tabItem {
+                    
+                    userInfo.workouts = []
+                    for w in fetchdata.Workouts.workouts.indices {
+                        userInfo.workouts.append(Workout(name: fetchdata.Workouts.workouts[w].Name, exercises: []))
+                        for e in fetchdata.Workouts.workouts[w].Exercises {
+                            userInfo.workouts[w].exercises.append(Exercise(name: e.Name, sets: e.Sets, reps: e.Reps, weight: e.Weight))
+                        }
+                    }
+                      
+                }
+                .tabItem {
                     Image(systemName: "house")
                     Text("Home")
-                }
+                }.background(Color.accent)
                 SettingsView(viewState: $viewState).tabItem{
                     Image(systemName: "gear")
                     Text("Settings")
-                }
+                }.background(Color.accent)
             
-            }
+            }.background(Color.accent)
     }
     }
 }

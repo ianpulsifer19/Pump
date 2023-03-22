@@ -15,11 +15,21 @@ struct MainView: View {
     
     var body: some View {
         ZStack {
-            Rectangle().edgesIgnoringSafeArea(.all).foregroundColor(.highlight)
+            Rectangle().edgesIgnoringSafeArea(.all).foregroundColor(.accent)
             VStack{
                 
-                List(userInfo.workouts){item in
-                    Text(item.name)
+                NavigationView{
+                    
+                ScrollView{
+                    ForEach($userInfo.workouts) { w in
+                        NavigationLink{
+                            
+                        }label:{
+                            WorkoutDayView(workout: w)
+                        }.navigationTitle("Workouts")
+                    }
+                }
+                    
                 }
                 
                 
@@ -32,7 +42,7 @@ struct MainView: View {
                 let database = Database.database().reference().child("users/\(uid)")
                 database.setValue(self.userInfo.dictionary)
             }label: {
-                Text("Add workout").padding().background(Color.accent).foregroundColor(Color.highlight).cornerRadius(20)
+                Text("Add workout").padding().background(Color.highlight).foregroundColor(Color.accent).cornerRadius(20)
         }
                 
             }
