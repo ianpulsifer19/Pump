@@ -7,10 +7,9 @@
 
 import Foundation
 
-class Workout: Identifiable {
+class Workout {
     @Published var name: String
     @Published var exercises: [Exercise]
-    @Published var id = UUID()
     
     var dictionary: [String: Any]{
         

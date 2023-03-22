@@ -7,12 +7,11 @@
 
 import Foundation
 
-class Exercise: Identifiable {
+class Exercise {
     @Published var name: String
     @Published var sets: Int
     @Published var reps: Int
     @Published var weight: Int
-    @Published var id = UUID()
     
     var dictionary: [String: Any]{
         return ["Name": name, "Sets": sets, "Reps": reps, "Weight": weight]

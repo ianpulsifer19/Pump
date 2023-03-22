@@ -8,42 +8,22 @@
 import SwiftUI
 
 struct WorkoutDayView: View {
-    @Binding var viewState: ViewState
+    @Binding var workout: Workout
     var body: some View {
         ZStack {
             Rectangle()
                 .edgesIgnoringSafeArea(.all)
-                .background(Color.blue)
+                .foregroundColor(Color.highlight)
             VStack {
-                Spacer()
-                    Text("exercise | Sets: sets | Reps: reps")
-                Button {
-                    //viewState = .editWorkout
-                } label: {
-                    Text("Edit Workout")
-                        .frame(width: 220, height: 50, alignment: .center)
-                        .background(Color.white)
-                        .cornerRadius(20)
-                        
-                }.padding()
-                Button {
-                    //viewState = .startWorkout
-                } label: {
-                    Text("Start Workout")
-                        .frame(width: 220, height: 50, alignment: .center)
-                        .background(Color.green)
-                        .cornerRadius(20)
-                        
-                }.padding()
-
+                Text(workout.name).foregroundColor(Color.accent).font(Constants.textFont).padding()
             }
 
-            }
+        }.cornerRadius(40)
     }
 }
 
 struct WorkoutDayView_Previews: PreviewProvider {
     static var previews: some View {
-        WorkoutDayView(viewState: Binding.constant(.workout))
+        WorkoutDayView(workout: Binding.constant(Workout()))
     }
 }

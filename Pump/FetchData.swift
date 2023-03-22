@@ -7,7 +7,7 @@ final class FetchData: ObservableObject {
     @Published var Workouts: workouts = workouts()
     
     func getData() async{
-        let URLString = "https://pump-pump19-default-rtdb.firebaseio.com/users/\(Auth.auth().currentUser?.uid).json"
+        let URLString = "https://pump-pump19-default-rtdb.firebaseio.com/users/h8W6OjcXDcY9REWqlvPOEkj6P193.json"
         
         guard let url = URL(string: URLString) else {return}
         
@@ -16,7 +16,9 @@ final class FetchData: ObservableObject {
             
             let workouts = try JSONDecoder().decode(workouts.self, from: data)
             self.Workouts = workouts
-            print(Workouts)
+            print()
+            print(Workouts.uid)
+            print()
         }catch{
             print(error)
         }
@@ -25,19 +27,18 @@ final class FetchData: ObservableObject {
 
 struct workouts: Codable {
     var workouts: [workout] = [workout]()
+    var uid: String = "poopman"
 }
 
-struct workout: Identifiable, Codable {
-    var name: String = "Monday"
-    var exercises: [exercise]
-    var id: String
+struct workout: Codable {
+    var Name: String = "Monday"
+    var Exercises: [exercise] = [exercise()]
 }
 
-struct exercise: Identifiable, Codable {
-    var name: String = "Curls"
-    var sets: Int = 0
-    var reps: Int = 0
-    var weight: Int = 0
-    var id: String
+struct exercise: Codable {
+    var Name: String = "Curls"
+    var Sets: Int = 0
+    var Reps: Int = 0
+    var Weight: Int = 0
 }
 

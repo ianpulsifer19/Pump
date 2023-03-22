@@ -13,14 +13,41 @@ struct MainView: View {
     @EnvironmentObject var userInfo: UserInfo
     @StateObject var fetchdata = FetchData()
     
+    init(){
+        UITableView.appearance().backgroundColor = .clear
+    }
+    
     var body: some View {
         ZStack {
-            Rectangle().edgesIgnoringSafeArea(.all).foregroundColor(.highlight)
+
             VStack{
                 
-                List(userInfo.workouts){item in
-                    Text(item.name)
+                NavigationView{
+                    ZStack{
+                        Rectangle().edgesIgnoringSafeArea(.all).foregroundColor(.accent)
+                List{
+                    
+                    ForEach(0..<userInfo.workouts.count, id: \.self) { index in
+                        NavigationLink{
+                            
+                        }label:{
+                            WorkoutDayView(workout: $userInfo.workouts[index])
+                        }.swipeActions(edge: .trailing) {
+                            Button(role: .destructive) {
+                                userInfo.workouts.remove(at: index)
+                                
+                                guard let uid = Auth.auth().currentUser?.uid else{return}
+                                let database = Database.database().reference().child("users/\(uid)")
+                                database.setValue(self.userInfo.dictionary)
+                            } label: {
+                                Label("Delete", systemImage: "trash")
+                            }
+                        }.listRowBackground(Color.accent)
+                    }.navigationTitle("Workouts")
+                }.background(Color.accent)
+                    }
                 }
+                    
                 
                 
             //add workout
@@ -32,13 +59,10 @@ struct MainView: View {
                 let database = Database.database().reference().child("users/\(uid)")
                 database.setValue(self.userInfo.dictionary)
             }label: {
-                Text("Add workout").padding().background(Color.accent).foregroundColor(Color.highlight).cornerRadius(20)
+                Text("Add workout").padding().background(Color.highlight).foregroundColor(Color.accent).cornerRadius(20)
         }
                 
             }
-        }
-        .task{
-            await fetchdata.getData()
         }
     }
 
