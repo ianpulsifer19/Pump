@@ -10,6 +10,7 @@
 		2E320F2229C387B1006AFAA9 /* Stucts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E320F2129C387B1006AFAA9 /* Stucts.swift */; };
 		2E61E43529B93BD60014BADA /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E61E43429B93BD60014BADA /* Workout.swift */; };
 		2E61E43729BB8A450014BADA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E61E43629BB8A440014BADA /* GoogleService-Info.plist */; };
+		2E7D840229CCC30C002EF522 /* CheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7D840129CCC30C002EF522 /* CheckboxView.swift */; };
 		2EF8CDAD29B26F9D00898B41 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CDAC29B26F9D00898B41 /* UserInfo.swift */; };
 		2EF8CDB229B270CC00898B41 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CDAE29B270CB00898B41 /* SignUpView.swift */; };
 		2EF8CDB329B270CC00898B41 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CDAF29B270CB00898B41 /* AuthenticationView.swift */; };
@@ -55,6 +56,7 @@
 		2E320F2129C387B1006AFAA9 /* Stucts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stucts.swift; sourceTree = "<group>"; };
 		2E61E43429B93BD60014BADA /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		2E61E43629BB8A440014BADA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2E7D840129CCC30C002EF522 /* CheckboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxView.swift; sourceTree = "<group>"; };
 		2EF8CDAC29B26F9D00898B41 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		2EF8CDAE29B270CB00898B41 /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		2EF8CDAF29B270CB00898B41 /* AuthenticationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				2EF8CEDD29AE8E74007848F8 /* PumpApp.swift */,
 				2EF8CEDF29AE8E74007848F8 /* ContentView.swift */,
 				2EF8CDB829B271AC00898B41 /* MainView.swift */,
+				2E7D840129CCC30C002EF522 /* CheckboxView.swift */,
 				2EF8CDB629B270D400898B41 /* Constants.swift */,
 				2EF8CDBA29B271D000898B41 /* SettingsView.swift */,
 				2EF8CDBC29B2723600898B41 /* FetchData.swift */,
@@ -393,6 +396,7 @@
 				2EF8CDC329B675A800898B41 /* Exercise.swift in Sources */,
 				2EF8CEDE29AE8E74007848F8 /* PumpApp.swift in Sources */,
 				2EF8CDB429B270CC00898B41 /* ForgotPasswordView.swift in Sources */,
+				2E7D840229CCC30C002EF522 /* CheckboxView.swift in Sources */,
 				2EF8CDB329B270CC00898B41 /* AuthenticationView.swift in Sources */,
 				2EF8CDB729B270D500898B41 /* Constants.swift in Sources */,
 			);

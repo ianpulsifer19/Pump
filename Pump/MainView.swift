@@ -12,6 +12,7 @@ import FirebaseDatabase
 struct MainView: View {
     @EnvironmentObject var userInfo: UserInfo
     @StateObject var fetchdata = FetchData()
+    @State var num = 5
     
     init(){
         UITableView.appearance().backgroundColor = .clear
@@ -25,11 +26,12 @@ struct MainView: View {
                 NavigationView{
                     ZStack{
                         Rectangle().edgesIgnoringSafeArea(.all).foregroundColor(.accent)
-                List{
+                        VStack{
+                        List{
                     
                     ForEach(0..<userInfo.workouts.count, id: \.self) { index in
                         NavigationLink{
-                            
+                            WorkoutOverView(workout: $userInfo.workouts[index])
                         }label:{
                             WorkoutDayView(workout: $userInfo.workouts[index])
                         }.swipeActions(edge: .trailing) {
@@ -44,23 +46,24 @@ struct MainView: View {
                             }
                         }.listRowBackground(Color.accent)
                     }.navigationTitle("Workouts")
-                }.background(Color.accent)
+                        }.background(Color.accent)
+                            Button{
+                            guard let uid = Auth.auth().currentUser?.uid else{return}
+
+                            userInfo.workouts.append(Workout())
+
+                            let database = Database.database().reference().child("users/\(uid)")
+                            database.setValue(self.userInfo.dictionary)
+                        }label: {
+                            Text("Add workout").padding().background(Color.highlight).foregroundColor(Color.accent).cornerRadius(20)
+                    }
+                        }
                     }
                 }
-                    
-                
                 
             //add workout
-                Button{
-                guard let uid = Auth.auth().currentUser?.uid else{return}
-
-                userInfo.workouts.append(Workout())
-
-                let database = Database.database().reference().child("users/\(uid)")
-                database.setValue(self.userInfo.dictionary)
-            }label: {
-                Text("Add workout").padding().background(Color.highlight).foregroundColor(Color.accent).cornerRadius(20)
-        }
+    
+            
                 
             }
         }
