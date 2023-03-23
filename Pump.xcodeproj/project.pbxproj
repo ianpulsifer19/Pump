@@ -137,10 +137,12 @@
 		2EF8CEDC29AE8E74007848F8 /* Pump */ = {
 			isa = PBXGroup;
 			children = (
+				61FE064429CCCC140045D70A /* ExcerciseDayView.swift */,
 				2EF8CEDD29AE8E74007848F8 /* PumpApp.swift */,
 				2EF8CEDF29AE8E74007848F8 /* ContentView.swift */,
 				2EF8CDB829B271AC00898B41 /* MainView.swift */,
 				2E7D840129CCC30C002EF522 /* CheckboxView.swift */,
+				D303192229CB6FED00D2B056 /* ExerciseDetailView.swift */,
 				2EF8CDB629B270D400898B41 /* Constants.swift */,
 				2EF8CDBA29B271D000898B41 /* SettingsView.swift */,
 				2EF8CDBC29B2723600898B41 /* FetchData.swift */,
@@ -382,6 +384,7 @@
 			files = (
 				2EF8CDB229B270CC00898B41 /* SignUpView.swift in Sources */,
 				2EF8CDB929B271AC00898B41 /* MainView.swift in Sources */,
+				61FE064529CCCC140045D70A /* ExcerciseDayView.swift in Sources */,
 				2EF8CDBD29B2723600898B41 /* FetchData.swift in Sources */,
 				D3E8C63B29B67750002FA225 /* WorkoutOverView.swift in Sources */,
 				2EF8CDB529B270CC00898B41 /* LogInView.swift in Sources */,
@@ -392,6 +395,7 @@
 				2EF8CDBB29B271D000898B41 /* SettingsView.swift in Sources */,
 				2E61E43529B93BD60014BADA /* Workout.swift in Sources */,
 				2EF8CDBF29B670A100898B41 /* WorkoutDetailView.swift in Sources */,
+				D303192329CB6FED00D2B056 /* ExerciseDetailView.swift in Sources */,
 				CC979D3329BFA4A900CEA419 /* NotesView.swift in Sources */,
 				2EF8CDC329B675A800898B41 /* Exercise.swift in Sources */,
 				2EF8CEDE29AE8E74007848F8 /* PumpApp.swift in Sources */,
