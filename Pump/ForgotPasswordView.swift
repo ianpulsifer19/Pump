@@ -14,15 +14,15 @@ struct ForgotPasswordView: View {
     
     var body: some View {
         ZStack {
-            Rectangle().edgesIgnoringSafeArea(.all).foregroundColor(.highlight)
+            Rectangle().edgesIgnoringSafeArea(.all).foregroundColor(.accent)
             VStack {
                 Spacer()
-                Image("logo").resizable().aspectRatio(contentMode: .fit).frame(width: 200)
+                Image("logo").resizable().aspectRatio(contentMode: .fit).frame(width: 300)
                 Spacer()
                
                 VStack{
-                    TextField("Email Address", text: $userInfo.username).padding(.bottom)
-                }.padding().background(Color.accent).cornerRadius(12).padding().font(Constants.textFont)
+                    TextField("Email Address", text: $userInfo.username)
+                }.padding().background(Color.accent).padding().background(Color.highlight).cornerRadius(12).padding().font(Constants.textFont)
                 
                 Button{
                     Auth.auth().sendPasswordReset(withEmail: userInfo.username) { error in
@@ -33,12 +33,12 @@ struct ForgotPasswordView: View {
                     }
                 } label:{
                     Text("Forgot Password").frame(width: 220, height: 50, alignment: .center).font(Constants.buttonFont)
-                }.background(Color.accent).cornerRadius(200).padding()
+                }.background(Color.highlight).cornerRadius(200).padding().foregroundColor(.accent)
                 Button{
                     viewState = .authenticate
                 } label:{
                     Text("Back").frame(width: 220, height: 50, alignment: .center).font(Constants.buttonFont)
-                }.background(Color.accent).cornerRadius(200)
+                }.background(Color.highlight).cornerRadius(200).foregroundColor(.accent)
 
                 
 
