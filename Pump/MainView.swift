@@ -31,7 +31,7 @@ struct MainView: View {
                     
                     ForEach(0..<userInfo.workouts.count, id: \.self) { index in
                         NavigationLink{
-                            WorkoutOverView(workout: $userInfo.workouts[index])
+                            WorkoutOverView(work: $userInfo.workouts[index])
                         }label:{
                             WorkoutDayView(workout: $userInfo.workouts[index])
                         }.swipeActions(edge: .trailing) {

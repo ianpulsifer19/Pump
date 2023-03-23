@@ -13,9 +13,6 @@ struct WorkoutOverView: View {
     @Binding var workout: Workout
     @EnvironmentObject var userInfo: UserInfo
     
-    init(){
-        UITableView.appearance().backgroundColor = .clear
-    }
     
     var body: some View {
         ZStack {
@@ -67,6 +64,8 @@ struct WorkoutOverView: View {
             
                 
             }
+        }.onAppear{
+            UITableView.appearance().backgroundColor = .clear
         }
     }
 
