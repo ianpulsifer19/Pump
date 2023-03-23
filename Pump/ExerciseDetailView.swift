@@ -14,6 +14,7 @@ struct ExerciseDetailView: View {
 
             VStack{
                 Text("Sets:")
+                    .foregroundColor(Color.accent)
                 TextField("", value: $exercise.sets, formatter: NumberFormatter())
                     .padding([.bottom])
                 Text("Reps:")
