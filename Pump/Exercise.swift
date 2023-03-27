@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Exercise {
+class Exercise: ObservableObject {
     @Published var name: String
     @Published var sets: Int
     @Published var reps: Int

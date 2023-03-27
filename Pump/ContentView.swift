@@ -9,7 +9,9 @@ import SwiftUI
 import FirebaseAuth
 import CoreMIDI
 
+
 struct ContentView: View {
+    
     @StateObject var fetchdata = FetchData()
     @EnvironmentObject var userInfo: UserInfo
     @State var viewState: ViewState = .authenticate
@@ -30,9 +32,19 @@ struct ContentView: View {
         else{
         
             TabView{
-                MainView().task{
+                ZStack{
+                    if viewState == .isLoading{
+                        ZStack{
+                        Rectangle().edgesIgnoringSafeArea(.all).foregroundColor(.accent)
+                            ProgressView().progressViewStyle(CircularProgressViewStyle(tint: Color.highlight))
+                    }
+                    } else{
+                MainView()
+                    }
+                }.task{
+                    viewState = .isLoading
                     await fetchdata.getData()
-                    
+                    viewState = .list
                     userInfo.workouts = []
                     for w in fetchdata.Workouts.workouts.indices {
                         userInfo.workouts.append(Workout(name: fetchdata.Workouts.workouts[w].Name, exercises: []))

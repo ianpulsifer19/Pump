@@ -23,16 +23,17 @@ class UserInfo: ObservableObject{
     @Published var FavTeam: String
     @Published var workouts = [Workout()]
     
-    func getData(){
-        var ref = Database.database().reference()
-        
-        ref.child("user/\(Auth.auth().currentUser?.uid)").getData { error, snapshot in
-            print(snapshot)
-        }
-        
-        
-    }
-    
+//
+//    func getData(){
+//        var ref = Database.database().reference()
+//
+//        ref.child("user/\(Auth.auth().currentUser?.uid)").getData { error, snapshot in
+//            print(snapshot)
+//        }
+//
+//
+//    }
+//
 //    func getData(){
 //        let db = Firestore.firestore()
 //

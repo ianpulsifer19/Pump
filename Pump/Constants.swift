@@ -18,6 +18,7 @@ enum ViewState{
     case forgotpassword
     case editworkout
     case workout
+    case isLoading
 }
 
 struct Constants{

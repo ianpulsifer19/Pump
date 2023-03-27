@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Workout {
+class Workout: ObservableObject {
     @Published var name: String
     @Published var exercises: [Exercise]
     
@@ -21,7 +21,7 @@ class Workout {
         return ["Name": name, "Exercises": works]
     }
     
-    init(name: String = "No Name", exercises: [Exercise] = [Exercise(), Exercise()]){
+    init(name: String = "No Name", exercises: [Exercise] = [Exercise()]){
         self.name = name
         self.exercises = exercises
     }

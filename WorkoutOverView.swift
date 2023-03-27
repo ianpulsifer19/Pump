@@ -10,15 +10,14 @@ import FirebaseAuth
 import FirebaseDatabase
 
 struct WorkoutOverView: View {
-    @Binding var workout: Workout
+    
+    @ObservedObject var workout: Workout
     @EnvironmentObject var userInfo: UserInfo
     
     
     var body: some View {
         ZStack {
 
-            VStack{
-                
                 NavigationView{
                     ZStack{
                         Rectangle().edgesIgnoringSafeArea(.all).foregroundColor(.accent)
@@ -29,7 +28,7 @@ struct WorkoutOverView: View {
                         NavigationLink{
                             
                         }label:{
-                            ExerciseDayView(workout: $workout.exercises[index])
+                            ExcerciseDayView(excercise: $workout.exercises[index])
                             
                         }.swipeActions(edge: .trailing) {
                             Button(role: .destructive) {
@@ -42,19 +41,29 @@ struct WorkoutOverView: View {
                                 Label("Delete", systemImage: "trash")
                             }
                         }.listRowBackground(Color.accent)
-                    }.navigationTitle("Workouts")
+                            }.toolbar {
+                                ToolbarItem(placement: .principal) {
+                                    TextField("Title", text: $workout.name).font(Font.title.weight(.bold)).onSubmit {
+                                        guard let uid = Auth.auth().currentUser?.uid else{return}
+                                        
+                                        let database = Database.database().reference().child("users/\(uid)")
+                                        database.setValue(self.userInfo.dictionary)
+                                    }
+                                }
+                              }
                         }.background(Color.accent)
+                            
                             
                             Button{
                             guard let uid = Auth.auth().currentUser?.uid else{return}
 
-                            workout.append(Exercise())
+                                workout.exercises.append(Exercise())
 
                             let database = Database.database().reference().child("users/\(uid)")
                             database.setValue(self.userInfo.dictionary)
                         }label: {
-                            Text("Add workout").padding().background(Color.highlight).foregroundColor(Color.accent).cornerRadius(20)
-                    }
+                            Text("Add Excercise").padding().background(Color.highlight).foregroundColor(Color.accent).cornerRadius(20)
+                        }
                         }
                     }
                 }
@@ -62,10 +71,7 @@ struct WorkoutOverView: View {
             //add workout
     
             
-                
-            }
-        }.onAppear{
-            UITableView.appearance().backgroundColor = .clear
+            
         }
     }
 
@@ -73,6 +79,6 @@ struct WorkoutOverView: View {
 
 struct WorkoutOverView_Previews: PreviewProvider {
     static var previews: some View {
-        WorkoutOverView()
+        WorkoutOverView(workout: Workout())
     }
 }
