@@ -13,6 +13,7 @@ struct WorkoutOverView: View {
     
     @ObservedObject var workout: Workout
     @EnvironmentObject var userInfo: UserInfo
+    @Binding var name: String
     
     
     var body: some View {
@@ -28,8 +29,10 @@ struct WorkoutOverView: View {
                         NavigationLink{
                             
                         }label:{
+                            VStack{
                             ExcerciseDayView(excercise: $workout.exercises[index])
-                            
+                                CheckboxRowView(numberOfCheckboxes: $workout.exercises[index].sets)
+                            }
                         }.swipeActions(edge: .trailing) {
                             Button(role: .destructive) {
                                 workout.exercises.remove(at: index)
@@ -43,7 +46,7 @@ struct WorkoutOverView: View {
                         }.listRowBackground(Color.accent)
                             }.toolbar {
                                 ToolbarItem(placement: .principal) {
-                                    TextField("Title", text: $workout.name).font(Font.title.weight(.bold)).onSubmit {
+                                    TextField("Title", text: $name).font(Font.title.weight(.bold)).onSubmit {
                                         guard let uid = Auth.auth().currentUser?.uid else{return}
                                         
                                         let database = Database.database().reference().child("users/\(uid)")
@@ -79,6 +82,6 @@ struct WorkoutOverView: View {
 
 struct WorkoutOverView_Previews: PreviewProvider {
     static var previews: some View {
-        WorkoutOverView(workout: Workout())
+        WorkoutOverView(workout: Workout(), name: Binding.constant(""))
     }
 }

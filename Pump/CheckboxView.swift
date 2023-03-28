@@ -13,7 +13,7 @@ struct CheckboxRowView: View {
     var body: some View {
         HStack {
             ForEach(0..<numberOfCheckboxes, id: \.self) { index in
-                CheckboxView(isChecked: false)
+                CheckboxView(isChecked: false).padding(.top).padding(.leading).padding(.trailing)
             }
         }
     }
@@ -32,7 +32,7 @@ struct CheckboxView: View {
                 Image(systemName: "square")
             }
         }
-        .buttonStyle(BorderlessButtonStyle())
+        .buttonStyle(BorderlessButtonStyle()).foregroundColor(Color.highlight)
     }
 }
 

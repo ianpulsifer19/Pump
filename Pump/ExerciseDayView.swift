@@ -33,7 +33,7 @@ struct ExcerciseDayView: View {
                 }
             }
 
-        }.cornerRadius(40)
+        }.cornerRadius(20)
     }
 }
 

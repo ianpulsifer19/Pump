@@ -21,7 +21,6 @@
 		2EF8CDB929B271AC00898B41 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CDB829B271AC00898B41 /* MainView.swift */; };
 		2EF8CDBB29B271D000898B41 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CDBA29B271D000898B41 /* SettingsView.swift */; };
 		2EF8CDBD29B2723600898B41 /* FetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CDBC29B2723600898B41 /* FetchData.swift */; };
-		2EF8CDBF29B670A100898B41 /* WorkoutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CDBE29B670A100898B41 /* WorkoutDetailView.swift */; };
 		2EF8CDC329B675A800898B41 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CDC229B675A800898B41 /* Exercise.swift */; };
 		2EF8CEDE29AE8E74007848F8 /* PumpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CEDD29AE8E74007848F8 /* PumpApp.swift */; };
 		2EF8CEE029AE8E74007848F8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8CEDF29AE8E74007848F8 /* ContentView.swift */; };
@@ -68,7 +67,6 @@
 		2EF8CDB829B271AC00898B41 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		2EF8CDBA29B271D000898B41 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		2EF8CDBC29B2723600898B41 /* FetchData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchData.swift; sourceTree = "<group>"; };
-		2EF8CDBE29B670A100898B41 /* WorkoutDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutDetailView.swift; sourceTree = "<group>"; };
 		2EF8CDC229B675A800898B41 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		2EF8CEDA29AE8E74007848F8 /* Pump.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pump.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF8CEDD29AE8E74007848F8 /* PumpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PumpApp.swift; sourceTree = "<group>"; };
@@ -152,7 +150,6 @@
 				2EF8CDC229B675A800898B41 /* Exercise.swift */,
 				2E61E43429B93BD60014BADA /* Workout.swift */,
 				2EF8CDAF29B270CB00898B41 /* AuthenticationView.swift */,
-				2EF8CDBE29B670A100898B41 /* WorkoutDetailView.swift */,
 				D35C8E8529BA5E3300180B22 /* WorkoutDayView.swift */,
 				2E0DB7A329CCD1C300C7876B /* ExerciseDayView.swift */,
 				D3E8C63A29B67750002FA225 /* WorkoutOverView.swift */,
@@ -395,7 +392,6 @@
 				2EF8CDAD29B26F9D00898B41 /* UserInfo.swift in Sources */,
 				2EF8CDBB29B271D000898B41 /* SettingsView.swift in Sources */,
 				2E61E43529B93BD60014BADA /* Workout.swift in Sources */,
-				2EF8CDBF29B670A100898B41 /* WorkoutDetailView.swift in Sources */,
 				CC979D3329BFA4A900CEA419 /* NotesView.swift in Sources */,
 				2EF8CDC329B675A800898B41 /* Exercise.swift in Sources */,
 				2EF8CEDE29AE8E74007848F8 /* PumpApp.swift in Sources */,

@@ -18,7 +18,7 @@ struct WorkoutDayView: View {
                 Text(workout.name).foregroundColor(Color.accent).font(Constants.textFont).padding()
             }
 
-        }.cornerRadius(40)
+        }.cornerRadius(20)
     }
 }
 
