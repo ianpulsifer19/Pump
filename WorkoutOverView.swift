@@ -31,7 +31,7 @@ struct WorkoutOverView: View {
                         }label:{
                             VStack{
                             ExcerciseDayView(excercise: $workout.exercises[index])
-                                CheckboxRowView(numberOfCheckboxes: $workout.exercises[index].sets)
+                                CheckboxRowView(numberOfCheckboxes: $workout.exercises[index].sets).fixedSize()
                             }
                         }.swipeActions(edge: .trailing) {
                             Button(role: .destructive) {

@@ -15,23 +15,34 @@ struct ExcerciseDayView: View {
             Rectangle()
                 .edgesIgnoringSafeArea(.all)
                 .foregroundColor(Color.highlight)
-            VStack {
+            VStack{
+                Text(excercise.name)
+                    .foregroundColor(Color.accent).font(.custom("HelveticaNeue-Thin", size: 30)).padding(.trailing).padding(.leading).padding(.top)
                 HStack{
-            Text(excercise.name)
-                        .foregroundColor(Color.accent).font(Constants.textFont).padding()
-                        
+                    VStack{
+                        Text("Reps:").foregroundColor(Color.accent).font(Constants.textFont).padding(.top)
             Text(String(excercise.reps))
-                        .foregroundColor(Color.accent).font(Constants.textFont).padding()
+                            .foregroundColor(Color.accent).font(.custom("HelveticaNeue-Thin", size: 25)).padding(.bottom).padding(.leading).padding(.trailing)
+                        
+                    }
+                    VStack{
+                        Text("Sets:").foregroundColor(Color.accent).font(Constants.textFont).padding(.top)
             Text(String(excercise.sets))
-                        .foregroundColor(Color.accent).font(Constants.textFont).padding()
+                        .foregroundColor(Color.accent).font(.custom("HelveticaNeue-Thin", size: 25)).padding(.bottom).padding(.leading).padding(.trailing)
+                    }
+                    VStack{
+                        Text("Weight:").foregroundColor(Color.accent).font(Constants.textFont).padding(.top)
             Text(String(excercise.weight))
-                        .foregroundColor(Color.accent).font(Constants.textFont).padding()
+                        .foregroundColor(Color.accent).font(.custom("HelveticaNeue-Thin", size: 25)).padding(.bottom).padding(.leading).padding(.trailing)
+                    }
                     
                     
                     
                        
                 }
+                
             }
+            
 
         }.cornerRadius(20)
     }

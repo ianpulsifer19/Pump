@@ -17,7 +17,7 @@ class Exercise: ObservableObject {
         return ["Name": name, "Sets": sets, "Reps": reps, "Weight": weight]
     }
     
-    init(name: String = "Curls", sets: Int = 3, reps: Int = 10, weight: Int = 30){
+    init(name: String = "Curls", sets: Int = 4, reps: Int = 10, weight: Int = 30){
         self.name = name
         self.sets = sets
         self.reps = reps
