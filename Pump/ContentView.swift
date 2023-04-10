@@ -42,9 +42,10 @@ struct ContentView: View {
                 MainView()
                     }
                 }.task{
+                    if viewState != .authenticate || userInfo.loggedIn{
                     viewState = .isLoading
                     await fetchdata.getData()
-                    viewState = .list
+                        viewState = .list}
                     userInfo.workouts = []
                     for w in fetchdata.Workouts.workouts.indices {
                         userInfo.workouts.append(Workout(name: fetchdata.Workouts.workouts[w].Name, exercises: []))

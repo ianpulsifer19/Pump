@@ -13,7 +13,7 @@ struct CheckboxRowView: View {
     var body: some View {
         HStack {
             ForEach(0..<numberOfCheckboxes, id: \.self) { index in
-                CheckboxView(isChecked: false).padding(.top).padding(.leading).padding(.trailing)
+                CheckboxView(isChecked: false).padding(.top, 5).padding(.leading, 5).padding(.trailing, 5)
             }
         }
     }
