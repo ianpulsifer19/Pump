@@ -34,6 +34,7 @@ struct LogInView: View {
                             print(error?.localizedDescription)
                         }
                     }
+                    
                 } label:{
                     Text("Log In").frame(width: 220, height: 50, alignment: .center).font(Constants.buttonFont).foregroundColor(.accent)
                 }.background(Color.highlight).cornerRadius(200).padding(.top)

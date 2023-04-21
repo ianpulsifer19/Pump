@@ -21,7 +21,7 @@ class Workout: ObservableObject {
         return ["Name": name, "Exercises": works]
     }
     
-    init(name: String = "No Name", exercises: [Exercise] = [Exercise()]){
+    init(name: String = "New Workout", exercises: [Exercise] = []){
         self.name = name
         self.exercises = exercises
     }

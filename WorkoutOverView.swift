@@ -19,21 +19,17 @@ struct WorkoutOverView: View {
     var body: some View {
         ZStack {
 
-                NavigationView{
                     ZStack{
                         Rectangle().edgesIgnoringSafeArea(.all).foregroundColor(.accent)
                         VStack{
                         List{
                     
                             ForEach(0..<workout.exercises.count, id: \.self) { index in
-                        NavigationLink{
-                            
-                        }label:{
                             VStack{
-                            ExcerciseDayView(excercise: $workout.exercises[index])
-                                CheckboxRowView(numberOfCheckboxes: $workout.exercises[index].sets).fixedSize()
+                                ExcerciseDayView(name: $workout.exercises[index].name, sets: $workout.exercises[index].sets, reps: $workout.exercises[index].reps, weight: $workout.exercises[index].weight)
+                                CheckboxRowView(numberOfCheckboxes: $workout.exercises[index].sets).edgesIgnoringSafeArea(.all)
                             }
-                        }.swipeActions(edge: .trailing) {
+                        .swipeActions(edge: .trailing) {
                             Button(role: .destructive) {
                                 workout.exercises.remove(at: index)
                                 
@@ -69,7 +65,7 @@ struct WorkoutOverView: View {
                         }
                         }
                     }
-                }
+                
                 
             //add workout
     
